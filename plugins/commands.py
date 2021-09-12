@@ -192,8 +192,8 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
+            InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄𝐒 ⚒️', url='https://t.me/cv_updatez'),
+            InlineKeyboardButton('𝐉𝐎𝐈𝐍 ♂️', url='https://t.me/cv_group1')
         ]
         ]
-    await message.reply(text="<b>Developer : <a href='https://t.me/Cv_groupAdmin2'>𝓳ꪮꫀꪶ ᵇˣ</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>🔐</a>\nUpdate Channel : <a href='https://t.me/cv_updatez'>Updatez</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 👷 : <a href='https://t.me/Cv_groupAdmin2'>𝓳ꪮꫀꪶ ᵇˣ</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>🔐</a>\nUpdate Channel : <a href='https://t.me/cv_updatez'>Updatez</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
