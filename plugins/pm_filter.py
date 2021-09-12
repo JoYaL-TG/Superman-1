@@ -38,8 +38,9 @@ async def filter(client, message):
             )
             return
         except Exception:
-            await client.send_message(
+            await client.send_photo(
                 chat_id=message.from_user.id,
+                photo="https://telegra.ph/file/ff75af2798e2d3dcc7a91.jpg",
                 text="Something went Wrong.",
                 parse_mode="markdown",
                 disable_web_page_preview=True
@@ -171,7 +172,7 @@ async def group(client, message):
 def get_size(size):
     """Get size in readable format"""
 
-    units = "Bytes", 𝐊𝐁", "𝐌𝐁", "𝐆𝐁", "𝐓𝐁", "𝐏𝐁", "𝐄𝐁"
+    units = "Bytes", "𝐊𝐁", "𝐌𝐁", "𝐆𝐁", "𝐓𝐁", "𝐏𝐁", "𝐄𝐁"
     size = float(size)
     i = 0
     while size >= 1024.0 and i < len(units):
