@@ -42,8 +42,9 @@ async def start(bot, cmd):
                 )
                 return
             except Exception:
-                await bot.send_message(
+                await bot.send_photo(
                     chat_id=cmd.from_user.id,
+                    photo="https://telegra.ph/file/ff75af2798e2d3dcc7a91.jpg",
                     text="Something went Wrong.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
