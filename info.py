@@ -33,7 +33,7 @@ Hi {}
 
 I am an Advanced Auto-filter bot, Add me to your group , make me admin and see my power...😝🔥
 
-©️MᴀɪɴᴛᴀɪɴᴇD Bʏ : ✘ 𝓳ꪮꫀꪶ ᵇˣ ✘
+©️ MᴀɪɴᴛᴀɪɴᴇD Bʏ : <b><i><a href="https://t.me/Cv_groupAdmin2">✘ 𝓳ꪮꫀꪶ ᵇˣ ✘</a></i></b>
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
 
