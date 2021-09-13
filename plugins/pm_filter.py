@@ -122,6 +122,7 @@ async def group(client, message):
         return
     if 2 < len(message.text) < 50:    
         btn = []
+
         search = message.text
         result_txt = f"**🎬 Title:** {search}\n**🌟 Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**©️ {message.chat.title} 🍿**"
        
