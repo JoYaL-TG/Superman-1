@@ -198,3 +198,15 @@ async def bot_info(bot, message):
         ]
         ]
     await message.reply(text="<b>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 👷 : <a href='https://t.me/Cv_groupAdmin2'>𝓳ꪮꫀꪶ ᵇˣ</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>🔐</a>\nUpdate Channel : <a href='https://t.me/cv_updatez'>Updatez</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
+async def broadcast(bot, message):
+ if (message.reply_to_message):
+   ms = await message.reply_text("Checking All Users From Database")
+   ids = getid()
+   tot = len(ids)
+   await ms.edit(f"Starting Broadcast 😃 \n\n Sending Message To {tot} Users")
+   for id in ids:
+     try:
+     	await message.reply_to_message.copy(id)
+     except:
+     	pass
