@@ -201,24 +201,3 @@ async def bot_info(bot, message):
         ]
     await message.reply(text="<b>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 👷 : <a href='https://t.me/Cv_groupAdmin2'>𝓳ꪮꫀꪶ ᵇˣ</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>🔐</a>\nUpdate Channel : <a href='https://t.me/cv_updatez'>Updatez</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
-@Client.on_message(filters.private & filters.command(["start"]))
-async def start(bot, message):
-    text = ID_TEXT.format(update.from_user.id),
-    await message.reply_text(
-        text=text,
-        disable_web_page_preview=True,
-        quote=True
-    )
-
-ID_TEXT = """🆔 Your Telegram ID Is : {}"""
-
-@Client.on_message(filters.private & filters.command(["info"]))
-async def start(bot, message):
-    text = INFO_TEXT,
-    await message.reply_text(
-        text=text,
-        disable_web_page_preview=True,
-        quote=True
-    )
-
-INFO_TEXT = f"First Name : {message.from.user.first_name}"
