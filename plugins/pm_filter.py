@@ -152,7 +152,7 @@ Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Tʜᴇ Mᴏᴠɪᴇ :- {search} Tʜᴀᴛ Yᴏᴜ H�
 Cʜᴇᴄᴋ Wʜᴇᴛʜᴇʀ Rᴇǫᴜᴇsᴛᴇᴅ Qᴜᴇʀʏ {search} Is Cᴏʀʀᴇᴄᴛ Oʀ Nᴏᴛ Iɴ Gᴏᴏɢʟᴇ ❕...
 Iғ Iᴛ's Cᴏʀʀᴇᴄᴛ Tʜᴇɴ Tᴀɢ Aᴅᴍɪɴ (@ᴀᴅᴍɪɴs) Tᴏ ᴜᴘʟᴏᴀᴅ Tʜɪs {search} Mᴏᴠɪᴇ ❕
 """    
-            parse_mode="html",
+            parse_mode="HTML",
             reply_to_message_id=message.message_id
         )
         await asyncio.sleep(5)
