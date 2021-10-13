@@ -145,7 +145,7 @@ async def group(client, message):
             Send_message = await client.send_photo(
                  chat_id = message.chat.id,
                  photo="https://telegra.ph/file/eabeaf432b58f129ea2b4.jpg",
-                 caption=f"<b>Hɪ {message.from_user.mention} 👋,\nCᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Tʜᴇ Mᴏᴠɪᴇ</b> :- " {search} " <b>Tʜᴀᴛ Yᴏᴜ Hᴀᴠᴇ Rᴇǫᴜᴇsᴛᴇᴅ ‼️...\n\nCʜᴇᴄᴋ Wʜᴇᴛʜᴇʀ Rᴇǫᴜᴇsᴛᴇᴅ Qᴜᴇʀʏ</b> " {search}  " <b>Is Cᴏʀʀᴇᴄᴛ Oʀ Nᴏᴛ Iɴ Gᴏᴏɢʟᴇ ❕...\n\nIғ Iᴛ's Cᴏʀʀᴇᴄᴛ Tʜᴇɴ Tᴀɢ Aᴅᴍɪɴ (@admins) Tᴏ ᴜᴘʟᴏᴀᴅ Tʜɪs</b> " {search} " <b>Mᴏᴠɪᴇ ❕</b>",
+                 caption=f"<b>Hɪ {message.from_user.mention} 👋,\nCᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Tʜᴇ Mᴏᴠɪᴇ</b> :- ' {search} ' <b>Tʜᴀᴛ Yᴏᴜ Hᴀᴠᴇ Rᴇǫᴜᴇsᴛᴇᴅ ‼️...\n\nCʜᴇᴄᴋ Wʜᴇᴛʜᴇʀ Rᴇǫᴜᴇsᴛᴇᴅ Qᴜᴇʀʏ</b> ' {search}  ' <b>Is Cᴏʀʀᴇᴄᴛ Oʀ Nᴏᴛ Iɴ Gᴏᴏɢʟᴇ ❕...\n\nIғ Iᴛ's Cᴏʀʀᴇᴄᴛ Tʜᴇɴ Tᴀɢ Aᴅᴍɪɴ (@admins) Tᴏ ᴜᴘʟᴏᴀᴅ Tʜɪs</b> ' {search} ' <b>Mᴏᴠɪᴇ ❕</b>",
                  reply_to_message_id=message.message_id       
         )
         await asyncio.sleep(0)
