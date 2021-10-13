@@ -127,7 +127,7 @@ async def start(bot, cmd):
                     ],
                     [
                         InlineKeyboardButton("🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("𝖦𝗋𝗈𝗎𝗉", url="https://t.me/cv_group1")
+                        InlineKeyboardButton("𝖦𝗋𝗈𝗎𝗉", url="https://t.me/cinema_beacon_group")
                     ],
                     [
                         InlineKeyboardButton("🕵️‍♂️ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", url="https://t.me/Joel_TG"),
