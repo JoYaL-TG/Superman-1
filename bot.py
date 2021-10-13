@@ -1,5 +1,6 @@
 import logging
 import logging.config
+module = import_module(module_path)
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
