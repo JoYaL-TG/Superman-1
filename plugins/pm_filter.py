@@ -4,8 +4,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 from pyrogram import Client, filters
 import re
 import random
+import asyncio
 from pyrogram.errors import UserNotParticipant
-from utils import get_filter_results, get_file_details, is_subscribed, get_poster
+from utils import get_filter_results,
+fromt_file_details, is_subscribed, get_poster
 BUTTONS = {}
 BOT = {}
 
