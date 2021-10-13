@@ -1,5 +1,6 @@
 import os
 import logging
+import random
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
@@ -8,6 +9,26 @@ from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
 ADMINS = int(os.environ.get("ADMINS", 1745047302))
+
+PHOTO = [
+    "https://telegra.ph/file/9c47001f468a7d8ec3b85.jpg",
+    "https://telegra.ph/file/f3fb811e5b75175dbe6a2.jpg",
+    "https://telegra.ph/file/011b4087cdb8a0d07644f.jpg",
+    "https://telegra.ph/file/2c980314c0cdc1b9e2058.jpg",
+    "https://telegra.ph/file/e5f6428c770586043f90d.jpg",
+    "https://telegra.ph/file/b305e461514ff4919dcf9.jpg",
+    "https://telegra.ph/file/6b07d1e8b92b438de4e12.jpg",
+    "https://telegra.ph/file/b3e3417cdc4ec08241434.jpg",
+    "https://telegra.ph/file/6af9875a9a3a6c665ac6d.jpg",
+    "https://telegra.ph/file/91c596e85fde3e0aae79f.jpg",
+    "https://telegra.ph/file/56398140fae3873a56898.jpg",
+    "https://telegra.ph/file/dec15fb3bc3f0bc22880a.jpg",
+    "https://telegra.ph/file/09ffd32fd9c4984078219.jpg",
+    "https://telegra.ph/file/05e04a3b08b30c815a322.jpg",
+    "https://telegra.ph/file/f6f599389f7563c8385a6.jpg",
+    "https://telegra.ph/file/561fe647eee3a0b1bc3c8.jpg",
+    "https://telegra.ph/file/e1efa9565ace2324614ff.jpg"
+]
 
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
@@ -46,8 +67,8 @@ async def start(bot, cmd):
             except Exception:
                 await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    photo="https://telegra.ph/file/ff75af2798e2d3dcc7a91.jpg",
-                    text="Something went Wrong.",
+                    photo=f"{random.choice(PHOTO)}",
+                    caption="Something went Wrong.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -83,9 +104,10 @@ async def start(bot, cmd):
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
     elif len(cmd.command) > 1 and cmd.command[1] == 'subscribe':
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
-        await bot.send_message(
+        await bot.send_photo(
             chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            photo=f"{random.choice(PHOTO)}",
+            caption="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -95,10 +117,9 @@ async def start(bot, cmd):
             )
         )
     else:
-        await cmd.reply_text(
-            START_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
+        await cmd.reply_photo(
+            photo=f"{random.choice(PHOTO)}",
+            caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
                     [
                     [
