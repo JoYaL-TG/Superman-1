@@ -142,7 +142,7 @@ async def group(client, message):
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
         else:
-            Send_message = await bot.send_photo(
+            Send_message = await client.send_photo(
                  chat_id = message.chat.id,
                  photo="https://telegra.ph/file/eabeaf432b58f129ea2b4.jpg",
                  caption="<b>Hɪ {message.from_user.mention},\nCᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Tʜᴇ Mᴏᴠɪᴇ :- {search} Tʜᴀᴛ Yᴏᴜ Hᴀᴠᴇ Rᴇǫᴜᴇsᴛᴇᴅ ❕...\nCʜᴇᴄᴋ Wʜᴇᴛʜᴇʀ Rᴇǫᴜᴇsᴛᴇᴅ Qᴜᴇʀʏ {search} Is Cᴏʀʀᴇᴄᴛ Oʀ Nᴏᴛ Iɴ Gᴏᴏɢʟᴇ ❕...\nIғ Iᴛ's Cᴏʀʀᴇᴄᴛ Tʜᴇɴ Tᴀɢ Aᴅᴍɪɴ (@ᴀᴅᴍɪɴs) Tᴏ ᴜᴘʟᴏᴀᴅ Tʜɪs {search} Mᴏᴠɪᴇ ❕</b>",
