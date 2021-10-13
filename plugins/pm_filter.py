@@ -146,6 +146,7 @@ async def group(client, message):
             client.send_photo(
             chat_id = message.chat.id,
             parse_mode="html",
+            reply_to_message_id=update.message_id
             photo="https://telegra.ph/file/eabeaf432b58f129ea2b4.jpg",
             caption=f"""
 Hɪ {message.from_user.mention},
@@ -154,7 +155,7 @@ Cʜᴇᴄᴋ Wʜᴇᴛʜᴇʀ Rᴇǫᴜᴇsᴛᴇᴅ Qᴜᴇʀʏ {search} Is C�
 Iғ Iᴛ's Cᴏʀʀᴇᴄᴛ Tʜᴇɴ Tᴀɢ Aᴅᴍɪɴ (@ᴀᴅᴍɪɴs) Tᴏ ᴜᴘʟᴏᴀᴅ Tʜɪs {search} Mᴏᴠɪᴇ ❕
 """    
             
-            reply_to_message_id=update.message_id
+            
         )
         await asyncio.sleep(5)
         await Send_message.delete()
