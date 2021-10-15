@@ -18,7 +18,7 @@ GENRES = ["fun, fact",
          "Action, Adventure",
          "Film Noir",
          "Documentary"]
-VOTES = ["9221", "303", "56066", "373", "46026", "7736", "1294", "10311", "29458", "372624", "30959", "17725"]
+VOTES = ["9221", "303", "56066", "373", "46026", "7736", "1294", "10311", "29458", "372624", "30959", "17725", "25186", "4629", "36926", "463802", "36291", "36281", "294628"]
 
 @Client.on_message(filters.text & filters.private & filters.incoming & filters.user(AUTH_USERS) if AUTH_USERS else filters.text & filters.private & filters.incoming)
 async def filter(client, message):
@@ -27,7 +27,7 @@ async def filter(client, message):
     if AUTH_CHANNEL:
         invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         try:
-            user = await client.get_chat_member(int(AUTH_CHANNEL), message.from_user.id)
+            user = await client.get_chat_member(int(AUTH_CHANNEL), message.from_user.id) 
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.from_user.id,
@@ -142,14 +142,14 @@ async def group(client, message):
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
         else:
-            send_message = await client.send_photo(
+            Send_message = await client.send_photo(
                  chat_id = message.chat.id,
                  photo="https://telegra.ph/file/eabeaf432b58f129ea2b4.jpg",
                  caption=f"<b>Hɪ {message.from_user.mention} 👋,\nCᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Tʜᴇ Mᴏᴠɪᴇ</b> :- ' {search} ' <b>Tʜᴀᴛ Yᴏᴜ Hᴀᴠᴇ Rᴇǫᴜᴇsᴛᴇᴅ ‼️...\n\nCʜᴇᴄᴋ Wʜᴇᴛʜᴇʀ Rᴇǫᴜᴇsᴛᴇᴅ Qᴜᴇʀʏ</b> ' {search}  ' <b>Is Cᴏʀʀᴇᴄᴛ Oʀ Nᴏᴛ Iɴ Gᴏᴏɢʟᴇ ❕...\n\nIғ Iᴛ's Cᴏʀʀᴇᴄᴛ Tʜᴇɴ Tᴀɢ Aᴅᴍɪɴ (@admins) Tᴏ ᴜᴘʟᴏᴀᴅ Tʜɪs</b> ' {search} ' <b>Mᴏᴠɪᴇ ❕</b>",
                  reply_to_message_id=message.message_id       
         )
         await asyncio.sleep(10)
-        await send_message.delete(1)
+        await Send_message.delete()
         if not btn:
             return
 
