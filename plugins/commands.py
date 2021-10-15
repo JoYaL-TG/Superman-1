@@ -27,7 +27,30 @@ PHOTO = [
     "https://telegra.ph/file/05e04a3b08b30c815a322.jpg",
     "https://telegra.ph/file/f6f599389f7563c8385a6.jpg",
     "https://telegra.ph/file/561fe647eee3a0b1bc3c8.jpg",
-    "https://telegra.ph/file/e1efa9565ace2324614ff.jpg"
+    "https://telegra.ph/file/e1efa9565ace2324614ff.jpg",
+    "https://telegra.ph/file/b9585457e6ae7cc834ac6.jpg",
+    "https://telegra.ph/file/444af460ab9785d52e229.jpg",
+    "https://telegra.ph/file/05931986e2599d0ee6815.jpg",
+    "https://telegra.ph/file/968cbb7c6b04b776ff26e.jpg",
+    "https://telegra.ph/file/40815aab00039f9e5db8b.jpg",
+    "https://telegra.ph/file/34bafb8438ad3ef47ae78.jpg",
+    "https://telegra.ph/file/cf32ae611eb37862e61d5.jpg",
+    "https://telegra.ph/file/f9303edef6f4a16c525ae.jpg",
+    "https://telegra.ph/file/03430ea064121f11decb8.jpg",
+    "https://telegra.ph/file/e9ddab724643c871d01ad.jpg",
+    "https://telegra.ph/file/feb7b9cfa5ec5cfdd5892.jpg",
+    "https://telegra.ph/file/15f3895c6b4dee389853d.jpg",
+    "https://telegra.ph/file/c62f47b1a990b8c8b184f.jpg",
+    "https://telegra.ph/file/f20ae180f58812d1b9c58.jpg",
+    "https://telegra.ph/file/4f0b51842b0849c4bd069.jpg",
+    "https://telegra.ph/file/f1ec16bc10c73b65764d7.jpg",
+    "https://telegra.ph/file/e61e351e3913966cca46c.jpg",
+    "https://telegra.ph/file/e5c2931d3f93808c7ab43.jpg",
+    "https://telegra.ph/file/0315a61c48943ac0fd2ce.jpg",
+    "https://telegra.ph/file/0ebd004f4332bd69bb86d.jpg",
+    "https://telegra.ph/file/974e9eb7d1cd032aa75c5.jpg",
+    "https://telegra.ph/file/e0ed2d5dfdb8ee0680021.jpg",
+    "https://telegra.ph/file/50f89bfd69dc6ceff0cb9.jpg"
 ]
 
 @Client.on_message(filters.command("start"))
