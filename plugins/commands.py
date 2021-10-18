@@ -8,7 +8,6 @@ from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
-ADMINS = int(os.environ.get("ADMINS", 1745047302))
 
 PHOTO = [
     "https://telegra.ph/file/9c47001f468a7d8ec3b85.jpg",
