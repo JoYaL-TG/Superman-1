@@ -55,8 +55,6 @@ PHOTO = [
 
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       insert(int(message.chat.id))
-       await message.reply(
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start subinps"):
         if AUTH_CHANNEL:
