@@ -5,6 +5,9 @@ from pyrogram import Client, filters
 import re
 import random
 import asyncio
+from asyncio import sleep as slp
+from info import TIME
+from pyrogram.types import User, Message
 from pyrogram.errors import UserNotParticipant
 from utils import get_filter_results, get_file_details, is_subscribed, get_poster
 BUTTONS = {}
@@ -20,8 +23,11 @@ GENRES = ["fun, fact",
          "Documentary"]
 VOTES = ["9221", "303", "56066", "373", "46026", "7736", "1294", "10311", "29458", "372624", "30959", "17725", "25186", "4629", "36926", "463802", "36291", "36281", "294628"]
 
-@Client.on_message(filters.text & filters.private & filters.incoming & filters.user(AUTH_USERS) if AUTH_USERS else filters.text & filters.private & filters.incoming)
-async def filter(client, message):
+@Sam.on_message(filters.group & filters.chat(GROUPS) & filters.all)
+async def deleter(bot: Client, cmd: Message):
+         if cmd.from_user.id not in ADMINS:
+                  await slp(int(TIME))
+                  await cmd.delete()
     if message.text.startswith("/"):
         return
     if AUTH_CHANNEL:
