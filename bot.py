@@ -35,7 +35,8 @@ class Bot(Client):
         await super().stop()
         print("Bot stopped. Bye.")
 
+Sam = Client(
 
-app = Bot()
-Bot.run()
-print("Userbot Started!")
+app = Sam()
+Sam.run()
+print("🤧 Started!")
