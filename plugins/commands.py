@@ -6,7 +6,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
-from helper.database import  insert
 logger = logging.getLogger(__name__)
 
 ADMINS = int(os.environ.get("ADMINS", 1745047302))
@@ -55,7 +54,8 @@ PHOTO = [
 ]
 
 @Client.on_message(filters.command(['start']))
-async def start(client, cmd):
+async def start(client, message):
+       insert(int(message.chat.id))
        await message.reply(
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start subinps"):
@@ -140,7 +140,7 @@ async def start(client, cmd):
                     ]
                 ]
             )
-         )
+        )
     else:
         await cmd.reply_photo(
             photo=f"{random.choice(PHOTO)}",
@@ -250,4 +250,3 @@ async def bot_info(bot, message):
         ]
         ]
     await message.reply(text="<b>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 👷 : <a href='https://t.me/Cv_groupAdmin2'>𝓳ꪮꫀꪶ ᵇˣ</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>🔐</a>\nUpdate Channel : <a href='https://t.me/cv_updatez'>Updatez</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
-
