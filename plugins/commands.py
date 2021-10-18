@@ -61,7 +61,7 @@ async def text(client, message):
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
        await message.reply(
-    usr_cmdall1 = cmd.text
+        usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start subinps"):
         if AUTH_CHANNEL:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
