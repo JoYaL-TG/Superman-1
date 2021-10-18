@@ -140,7 +140,7 @@ async def start(client, cmd):
                     ]
                 ]
             )
-        )
+         )
     else:
         await cmd.reply_photo(
             photo=f"{random.choice(PHOTO)}",
