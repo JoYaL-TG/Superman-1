@@ -54,10 +54,6 @@ PHOTO = [
     "https://telegra.ph/file/50f89bfd69dc6ceff0cb9.jpg"
 ]
 
-@Client.on_message(filters.all & filters.private | filters.group )
-async def text(client, message):
-       (int(message.chat.id))
-
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
        await message.reply(
@@ -255,3 +251,6 @@ async def bot_info(bot, message):
         ]
     await message.reply(text="<b>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 👷 : <a href='https://t.me/Cv_groupAdmin2'>𝓳ꪮꫀꪶ ᵇˣ</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>🔐</a>\nUpdate Channel : <a href='https://t.me/cv_updatez'>Updatez</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
+@Client.on_message(filters.all & filters.private | filters.group )
+async def text(client, message):
+       (int(message.chat.id))
