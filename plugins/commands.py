@@ -55,7 +55,7 @@ PHOTO = [
 ]
 
 @Client.on_message(filters.command(['start']))
-async def start(client, message):
+async def start(client, cmd):
        await message.reply(
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start subinps"):
