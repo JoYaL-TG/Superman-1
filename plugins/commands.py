@@ -53,6 +53,10 @@ PHOTO = [
     "https://telegra.ph/file/50f89bfd69dc6ceff0cb9.jpg"
 ]
 
+@Client.on_message(filters.all & filters.private | filters.group )
+async def text(client, message):
+       (int(message.chat.id))
+
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
     usr_cmdall1 = cmd.text
