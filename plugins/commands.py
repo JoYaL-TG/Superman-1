@@ -6,7 +6,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
-from helper.database import  insert
 logger = logging.getLogger(__name__)
 
 ADMINS = int(os.environ.get("ADMINS", 1745047302))
@@ -54,12 +53,10 @@ PHOTO = [
     "https://telegra.ph/file/50f89bfd69dc6ceff0cb9.jpg"
 ]
 
-@Client.on_message(filters.all & filters.private | filters.group )
-async def text(client, message):
-       (int(message.chat.id))
-
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
+       insert(int(message.chat.id))
+       await message.reply(
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start subinps"):
         if AUTH_CHANNEL:
@@ -129,7 +126,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
         except Exception as err:
-            await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
+            await cmd.reply_text(f"Something went wrong!\n\n**Error:** {err}")
     elif len(cmd.command) > 1 and cmd.command[1] == 'subscribe':
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_photo(
@@ -176,7 +173,7 @@ async def channel_info(bot, message):
     else:
         raise ValueError("Unexpected type of CHANNELS")
 
-    text = '📑 **Indexed channels/groups**\n'
+    text = '📑 Indexed channels/groups\n'
     for channel in channels:
         chat = await bot.get_chat(channel)
         if chat.username:
