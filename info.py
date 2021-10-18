@@ -1,4 +1,5 @@
 import re
+import os
 from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
@@ -8,6 +9,8 @@ SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
+TIME = os.environ.get("TIME", None)
+GROUPS = [int(admin) for admin in environ.get("GROUPS", "").split()]
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
