@@ -11,6 +11,7 @@ API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
 TIME = os.environ.get("TIME", None)
 GROUPS = [int(admin) for admin in environ.get("GROUPS", "").split()]
+admins = set(int(x) for x in os.environ.get("admins", "1745047302").split())
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
