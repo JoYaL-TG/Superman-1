@@ -37,6 +37,6 @@ class Bot(Client):
 
 Sam = Client(
 
-app = Sam()
-Sam.run()
+app = Bot()
+Bot.run()
 print("🤧 Started!")
