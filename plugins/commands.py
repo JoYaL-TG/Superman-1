@@ -160,7 +160,7 @@ async def start(client, cmd):
                     ]    
                 ]
             )
-         )
+        )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
