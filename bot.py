@@ -36,6 +36,6 @@ class Bot(Client):
         print("Bot stopped. Bye.")
 
 
-app = Sam()
-Sam.run()
+app = Bot()
+Bot.run()
 print("Userbot Started!")
