@@ -1,6 +1,6 @@
 import os
 from pyrogram import Client ,filters
-from helper.database import getid
+from helper.database import get id
 ADMINS = int(os.environ.get("ADMINS", 1890385137))
 
 @Client.on_message(filters.command(['broadcast']) & filters.user(ADMINS))
