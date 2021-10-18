@@ -6,6 +6,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
+from helper.database import  insert
 logger = logging.getLogger(__name__)
 
 ADMINS = int(os.environ.get("ADMINS", 1745047302))
