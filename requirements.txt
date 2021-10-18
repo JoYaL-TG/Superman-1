@@ -9,3 +9,5 @@ requests
 parse-torrent-name
 pymongo
 dnspython
+pyrogram
+tgcrypto
