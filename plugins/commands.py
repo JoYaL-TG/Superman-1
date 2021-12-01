@@ -52,7 +52,7 @@ PHOTO = [
     "https://telegra.ph/file/50f89bfd69dc6ceff0cb9.jpg"
 ]
 
-@Client.on_message(filters.command(['start']))
+@Client.on_message(filters.command(['strt']))
 async def start(bot, cmd):
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start subinps"):
