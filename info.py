@@ -29,7 +29,7 @@ DATABASE_NAME = environ['DATABASE_NAME']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
-default_start_msg(f"""Hi {},
+default_start_msg("""Hi {},
 I am an Advanced Auto-filter bot, Add me to your group , make me admin and see my power...😝🔥
 
 ©️ MᴀɪɴᴛᴀɪɴᴇD Bʏ : <b><i><a href="https://t.me/Cv_groupAdmin2">✘ 𝓳ꪮꫀꪶ ᵇˣ ✘</a></i></b>""")
