@@ -91,7 +91,7 @@ async def start(bot, cmd):
                     chat_id=cmd.from_user.id,
                     photo=f"{random.choice(PHOTO)}",
                     caption="Something went Wrong.",
-                    parse_mode="markdown",
+                    parse_mode="HTML",
                     disable_web_page_preview=True
                 )
                 return
@@ -141,7 +141,7 @@ async def start(bot, cmd):
     else:
         await cmd.reply_photo(
             photo=f"{random.choice(PHOTO)}",
-            caption=START_MSG,
+            caption=START_MSG.format(cmd.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                     [
                     [
