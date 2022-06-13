@@ -145,16 +145,8 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                     [
                     [
-                        InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/Cv_links_project7_bot?startgroup=true")
-                    ],
-                    [
-                        InlineKeyboardButton("🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("𝖦𝗋𝗈𝗎𝗉", url="https://t.me/cinema_beacon_group")
-                    ],
-                    [
-                        InlineKeyboardButton("🕵️‍♂️ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", url="https://t.me/Joel_TG"),
-                        InlineKeyboardButton("😊 𝖠𝖻𝗈𝗎𝗍", callback_data="about")
-                    ]    
+                        InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/TheSupermanRoBoT?startgroup=true")
+                    ]
                 ]
             )
          )
@@ -238,7 +230,7 @@ async def delete(bot, message):
         await msg.edit('File is successfully deleted from database')
     else:
         await msg.edit('File not found in database')
-@Client.on_message(filters.command('about'))
+@Client.on_message(filters.command('എബൌട്ട്‌'))
 async def bot_info(bot, message):
     buttons = [
         [
